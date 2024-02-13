@@ -54,7 +54,9 @@ function Login() {
       validateName(nameRef.current.value) &&
       validatePassword(passWordRef.current.value) &&
       validateEmail(emailRef.current.value)
-    ) {
+    );
+    else setShov(false);
+    {
       let data = {
         username: `${nameRef.current.value}`,
         email: `${emailRef.current.value}`,
