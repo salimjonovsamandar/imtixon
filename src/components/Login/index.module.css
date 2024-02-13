@@ -22,6 +22,7 @@
   flex-direction: column;
   margin-top: 60px;
 }
+
 .logo {
   width: 120px;
   height: 45px;
@@ -90,4 +91,17 @@
   letter-spacing: 0%;
   text-align: left;
   margin-top: 100px;
+}
+
+.sign {
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  padding-top: 10px;
+
+  display: block;
+}
+.link {
+  display: flex;
+  gap: 10px;
 }

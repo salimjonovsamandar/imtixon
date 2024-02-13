@@ -1,17 +1,21 @@
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import './App.css'
 import Login from "./components/Login"
-import Header from "./components/Header"
 import Register from "./components/Register"
-
+import Home from './components/Home'
 
 function App() {
 
   return (
     <>
-      {/* <Header /> */}
-      <Login />
-      <Register/>
-      {/* <Card/> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Register />}></Route>
+          <Route path='home' element={<Home />}></Route>
+          <Route path='login' element={<Login />}></Route>
+        </Routes>
+
+      </BrowserRouter>
     </>
   )
 }

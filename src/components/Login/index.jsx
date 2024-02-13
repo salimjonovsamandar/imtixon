@@ -4,10 +4,10 @@ import male from "../Login/male.png";
 import styles from "./index.module.css";
 import { useRef } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 function Login() {
   const nameRef = useRef();
-  const emailRef = useRef();
   const passWordRef = useRef();
 
   function validateName(name) {
@@ -37,16 +37,17 @@ function Login() {
     ) {
       let data = {
         username: `${nameRef.current.value}`,
-        email: `${emailRef.current.value}`,
+        email: "test@gamil.com",
         password: `${passWordRef.current.value}`,
       };
       axios
-        .post("https://auth-rg69.onrender.com/api/auth/signup", data)
+        .post("https://auth-rg69.onrender.com/api/auth/signin", data)
         .then((response) => {
-          console.log(response.data);
+          localStorage.setItem("user", JSON.stringify(response.data.accessToken))
+          window.location.href = "/home"
         })
         .catch((error) => {
-          console.error("Ma'lumotlarni olishda xatolik yuz berdi:", error);
+          alert("Bunday foydalanuvchi topilmadi:", error)
         });
     }
   }
@@ -66,6 +67,7 @@ function Login() {
             ref={nameRef}
             type="text"
             required=""
+            placeholder="Loginingizni kiriting"
             name="text"
             className={styles.input}
           />
@@ -77,6 +79,7 @@ function Login() {
             ref={passWordRef}
             type="password"
             required=""
+            placeholder="Parolingizni kiriting"
             name="text"
             className={styles.input}
           />
@@ -85,6 +88,11 @@ function Login() {
         <button onClick={hendleSubmit} className={styles.button}>
           Kirish
         </button>
+        <div className={styles.link}>
+          <NavLink className={styles.sign} to="/login">SignIn</NavLink>
+          <NavLink className={styles.sign} to="/">SignUp</NavLink>
+        </div>
+
         <h6 className={styles.head}>Copyright © 2024 Vim kompaniyasi</h6>
       </div>
 

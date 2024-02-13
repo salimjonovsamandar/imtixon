@@ -28,23 +28,17 @@
   align-items: center;
   display: inline-block;
   top: 100px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .Title {
   color: rgb(37, 37, 37);
   font-size: 40px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   letter-spacing: 0%;
   text-align: left;
 }
-.desc {
-  color: rgb(75, 75, 75);
-  font-size: 14px;
-  font-weight: 400;
-  text-align: left;
-  margin-bottom: 50px;
-}
+
 .name {
   display: flex;
   flex-direction: column;
@@ -90,4 +84,18 @@
   letter-spacing: 0%;
   text-align: left;
   margin-top: 100px;
+}
+
+.sign{
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+padding-top: 10px;
+
+display: block;
+
+}
+.link{
+  display: flex;
+  gap: 10px;
 }
