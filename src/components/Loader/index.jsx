@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from "./index.module.css";
-
 function index() {
     return (
         <div>
@@ -8,5 +7,4 @@ function index() {
         </div>
     )
 }
-
 export default index

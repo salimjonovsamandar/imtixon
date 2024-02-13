@@ -1,6 +1,5 @@
 .card_nav {
   text-align: center;
-
   padding: 20px;
   background-color: aqua;
 }
@@ -16,19 +15,20 @@
     transform: scale(1.05);
   }
 }
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 20px;
   margin-top: 40px;
 }
-.description{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
+.description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 .cardbtn {
   padding: 5px;
@@ -40,5 +40,4 @@
   cursor: pointer;
   margin-left: 220px;
   font-size: 16px;
-  
 }
